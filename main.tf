@@ -1,7 +1,7 @@
 locals {
   apps = {
     helloapp  = "gcr.io/cloudrun/hello"
-    helloapp2 = "europe-west1-docker.pkg.dev/cloud-comp-101/examples/hello"
+    helloapp2 = "europe-west1-docker.pkg.dev/terraform-vm-362923/examples/hello"
   }
   apis = [
     "run.googleapis.com",
@@ -54,7 +54,7 @@ resource "google_artifact_registry_repository" "my-repo" {
 }
 
 resource "google_artifact_registry_repository_iam_member" "access" {
-  member     = "user:aitor.carrera@gmail.com"
+  member     = "user:alfreformac@gmail.com"
   project    = google_artifact_registry_repository.my-repo.project
   location   = google_artifact_registry_repository.my-repo.location
   repository = google_artifact_registry_repository.my-repo.name
